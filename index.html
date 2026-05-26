@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Zoubir | Développeur Full-Stack Portfolio</title>
+    <title>Mohamed Zoubir | Développeur Full-Stack</title>
     
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Mohamed Zoubir | Développeur Full-Stack Portfolio">
-    <meta name="description" content="Portfolio de Mohamed Zoubir, Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Découvrez mes projets, compétences et expériences en Django, Spring Boot, Laravel et Angular.">
-    <meta name="keywords" content="Mohamed Zoubir, Developpeur Full-Stack, 1337, 42 Network, Spring Boot, Django, Laravel, Angular, YouCode, Beni Mellal, Maroc, Portfolio">
+    <meta name="title" content="Mohamed Zoubir | Développeur Full-Stack">
+    <meta name="description" content="Portfolio de Mohamed Zoubir, Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Spécialiste en Spring Boot, Django, Laravel et Angular.">
+    <meta name="keywords" content="Mohamed Zoubir, Developpeur Full-Stack, 1337, 42 Network, Spring Boot, Django, Laravel, Angular, Beni Mellal, Maroc">
     <meta name="author" content="Mohamed Zoubir">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://med-zoubir.com">
-    <meta property="og:title" content="Mohamed Zoubir | Développeur Full-Stack Portfolio">
-    <meta property="og:description" content="Portfolio de Mohamed Zoubir, Développeur Full-Stack et étudiant à l'École 1337. Découvrez mes réalisations.">
+    <meta property="og:title" content="Mohamed Zoubir | Développeur Full-Stack">
+    <meta property="og:description" content="Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Spécialisé dans la conception d'architectures backend robustes et d'interfaces fluides.">
     <meta property="og:image" content="assets/images/portfolio-banner.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://med-zoubir.com">
-    <meta property="twitter:title" content="Mohamed Zoubir | Développeur Full-Stack Portfolio">
-    <meta property="twitter:description" content="Portfolio de Mohamed Zoubir, Développeur Full-Stack et étudiant à l'École 1337. Découvrez mes réalisations.">
+    <meta property="twitter:title" content="Mohamed Zoubir | Développeur Full-Stack">
+    <meta property="twitter:description" content="Développeur Full-Stack et étudiant à l'École 1337. Découvrez mes réalisations.">
     <meta property="twitter:image" content="assets/images/portfolio-banner.jpg">
 
     <!-- CSS stylesheet -->
@@ -30,11 +30,7 @@
 </head>
 <body>
 
-    <!-- Background Elements -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-
-    <!-- Header & Navigation -->
+    <!-- Floating Dock Header -->
     <header class="header" id="header">
         <div class="container">
             <a href="#" class="logo" id="logo">
@@ -42,21 +38,23 @@
             </a>
             
             <nav class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active" id="nav-link-home">Accueil</a>
-                <a href="#about" class="nav-link" id="nav-link-about">À Propos</a>
-                <a href="#timeline" class="nav-link" id="nav-link-timeline">Parcours</a>
-                <a href="#projects" class="nav-link" id="nav-link-projects">Projets</a>
-                <a href="#contact" class="nav-link" id="nav-link-contact">Contact</a>
+                <a href="#home" class="nav-link active" id="nav-link-home" data-i18n="nav.home">Accueil</a>
+                <a href="#about" class="nav-link" id="nav-link-about" data-i18n="nav.about">Profil</a>
+                <a href="#timeline" class="nav-link" id="nav-link-timeline" data-i18n="nav.timeline">Parcours</a>
+                <a href="#projects" class="nav-link" id="nav-link-projects" data-i18n="nav.projects">Projets</a>
+                <a href="#services" class="nav-link" id="nav-link-services" data-i18n="nav.services">Services</a>
+                <a href="#contact" class="nav-link" id="nav-link-contact" data-i18n="nav.contact">Contact</a>
             </nav>
 
             <div class="nav-actions">
-                <!-- Theme Toggle -->
-                <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Changer de thème">
-                    <!-- Moon Icon (Dark Mode active, click to light) -->
+                <!-- Lang Switcher -->
+                <button class="btn-icon lang-toggle" id="lang-toggle" aria-label="Language">EN</button>
+                
+                <!-- Theme Switcher -->
+                <button class="btn-icon theme-toggle" id="theme-toggle" aria-label="Thème">
                     <svg class="moon-icon" viewBox="0 0 24 24">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <!-- Sun Icon (Light Mode active, click to dark) -->
                     <svg class="sun-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -70,8 +68,8 @@
                     </svg>
                 </button>
                 
-                <!-- Mobile Navigation Toggle Button -->
-                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu principal">
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -87,88 +85,47 @@
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-content">
-                    <span class="hero-subtitle">Bonjour, je suis</span>
-                    <h1 class="hero-title">Mohamed <span>Zoubir</span></h1>
+                    <span class="hero-subtitle" data-i18n="hero.subtitle">Ingénierie Applicative & Web</span>
+                    <h1 class="hero-title">Mohamed<br><span class="outlined-text">Zoubir</span></h1>
                     <div class="hero-typewriter" id="hero-typewriter">
                         <span class="text"></span><span class="cursor"></span>
                     </div>
-                    <p class="hero-desc">
-                        Développeur Full-Stack polyvalent et passionné par l'innovation. Actuellement étudiant à l'École 1337 (42 Network), je transforme des concepts complexes en solutions logicielles robustes, élégantes et centrées sur l'utilisateur.
+                    <p class="hero-desc" data-i18n="hero.desc">
+                        Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Je me concentre sur la création d'architectures backend rigoureuses et d'interfaces logicielles fluides, performantes et centrées sur le produit.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary" id="hero-btn-connect">
+                        <a href="#contact" class="btn btn-primary" id="hero-btn-connect" data-i18n="hero.btn.contact">
                             Me contacter
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                         </a>
-                        <a href="assets/mohamed_zoubir.pdf" class="btn btn-secondary" id="hero-btn-cv" download>
-                            Télécharger CV
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        <a href="assets/mohamed_zoubir.pdf" class="btn btn-secondary" id="hero-btn-cv" download data-i18n="hero.btn.cv">
+                            Télécharger CV (PDF)
                         </a>
                     </div>
                 </div>
                 
                 <div class="hero-visual">
-                    <div class="tech-illustration">
-                        <div class="tech-card-header">
-                            <div class="tech-card-dots">
-                                <span class="tech-card-dot"></span>
-                                <span class="tech-card-dot"></span>
-                                <span class="tech-card-dot"></span>
+                    <!-- Bio Details Widget -->
+                    <div class="hero-widget">
+                        <h2 class="hero-widget-title" data-i18n="widget.title">Indicateurs clés</h2>
+                        <div class="hero-widget-list">
+                            <div class="hero-widget-item">
+                                <span class="hero-widget-label" data-i18n="widget.label.status">Statut professionnel</span>
+                                <span class="hero-widget-val" data-i18n="widget.val.status">Étudiant École 1337 / Développeur</span>
                             </div>
-                            <span class="tech-card-title">developer.js</span>
-                        </div>
-                        <div class="tech-card-body">
-                            <div class="tech-card-line">
-                                <span class="line-num">1</span>
-                                <span class="line-content"><span class="keyword">const</span> <span class="class-name">developer</span> = {</span>
+                            <div class="hero-widget-item">
+                                <span class="hero-widget-label" data-i18n="widget.label.origin">Origine & Action</span>
+                                <span class="hero-widget-val">Beni Mellal, Maroc</span>
                             </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">2</span>
-                                <span class="line-content">&nbsp;&nbsp;name: <span class="string">'Mohamed Zoubir'</span>,</span>
+                            <div class="hero-widget-item">
+                                <span class="hero-widget-label" data-i18n="widget.label.domains">Domaines clés</span>
+                                <span class="hero-widget-val">Java, Python, PHP, JavaScript</span>
                             </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">3</span>
-                                <span class="line-content">&nbsp;&nbsp;role: <span class="string">'Full-Stack Developer'</span>,</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">4</span>
-                                <span class="line-content">&nbsp;&nbsp;education: <span class="string">'Ecole 1337 (42 Network)'</span>,</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">5</span>
-                                <span class="line-content">&nbsp;&nbsp;skills: [</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">6</span>
-                                <span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Spring Boot'</span>, <span class="string">'Django'</span>, <span class="string">'Laravel'</span>,</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">7</span>
-                                <span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'Angular'</span>, <span class="string">'JavaScript'</span>, <span class="string">'Sass'</span></span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">8</span>
-                                <span class="line-content">&nbsp;&nbsp;],</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">9</span>
-                                <span class="line-content">&nbsp;&nbsp;passion: <span class="string">'Elegant & Performance Software'</span>,</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">10</span>
-                                <span class="line-content">&nbsp;&nbsp;solveProblems: () => {</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">11</span>
-                                <span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">'Creative and precise logic'</span>;</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">12</span>
-                                <span class="line-content">&nbsp;&nbsp;}</span>
-                            </div>
-                            <div class="tech-card-line">
-                                <span class="line-num">13</span>
-                                <span class="line-content">};</span>
+                            <div class="hero-widget-item">
+                                <span class="hero-widget-label" data-i18n="widget.label.links">Liens directes</span>
+                                <span class="hero-widget-val">
+                                    <a href="https://github.com/mdzoubir" target="_blank" rel="noopener">GitHub</a> &bull; 
+                                    <a href="https://www.linkedin.com/in/mohamed-zoubir/" target="_blank" rel="noopener">LinkedIn</a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -176,109 +133,103 @@
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About Section (Index 01) -->
         <section class="section reveal" id="about">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">À PROPOS</span>
-                    <h2 class="section-title">Qui suis-je ?</h2>
-                    <p class="section-desc">Découvrez mon histoire, mes aspirations et mes compétences techniques.</p>
-                </div>
-                
-                <div class="about-grid">
-                    <div class="about-visual">
-                        <img src="assets/images/profile_placeholder.jpg" alt="Mohamed Zoubir" id="about-img">
-                        <div class="about-overlay">
-                            <h3 class="about-overlay-name">Mohamed Zoubir</h3>
-                            <span class="about-overlay-title">Étudiant École 1337 & Développeur Full-Stack</span>
-                        </div>
-                    </div>
-                    
-                    <div class="about-content">
-                        <h3 class="about-content-title">Donner vie à vos idées grâce au code</h3>
-                        <p class="about-text">
-                            Développeur polyvalent et innovant, doté d'une capacité exceptionnelle à transformer des concepts complexes en solutions logicielles élégantes et performantes. Mon parcours à l'<strong>École 1337 (42 Network)</strong>, réputée pour sa rigueur et son apprentissage par projets, a renforcé ma capacité d'autonomie et de résolution de problèmes complexes de manière rigoureuse.<br><br>
-                            Passionné par l'ingénierie logicielle et le web, je combine des architectures Backend solides (Java Spring Boot, Python Django, PHP Laravel) avec des interfaces Frontend fluides et dynamiques (JavaScript, Angular, Sass).
-                        </p>
-                        
-                        <!-- Interactive Sub-tabs -->
-                        <div class="tabs-header">
-                            <button class="tab-btn active" id="tab-btn-skills" data-tab="skills">Compétences</button>
-                            <button class="tab-btn" id="tab-btn-languages" data-tab="languages">Langues</button>
+                <div class="section-index-grid">
+                    <div class="section-index-num" data-i18n="section.about.num">01 // PROFIL</div>
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-badge" data-i18n="section.about.badge">PRÉSENTATION</span>
+                            <h2 class="section-title" data-i18n="section.about.title">Concevoir des architectures fiables</h2>
+                            <p class="section-desc" data-i18n="section.about.desc">Mon approche repose sur l'implémentation de solutions logicielles structurées, la clarté du code et l'agilité technique.</p>
                         </div>
                         
-                        <!-- Skills Tab Panel -->
-                        <div class="tab-content active" id="tab-content-skills">
-                            <div class="skills-grid">
-                                <div class="skills-category">
-                                    <h4 class="skills-category-title">
-                                        <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                                        Langages & Bases
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Java</span>
-                                        <span class="skill-tag">Python</span>
-                                        <span class="skill-tag">PHP</span>
-                                        <span class="skill-tag">JavaScript (ES6+)</span>
-                                        <span class="skill-tag">SQL</span>
+                        <div class="about-grid">
+                            <div class="about-visual">
+                                <img src="assets/images/profile_placeholder.jpg" alt="Mohamed Zoubir" id="about-img">
+                            </div>
+                            
+                            <div class="about-content">
+                                <h3 class="about-content-title" data-i18n="about.content.title">Rigueur technique & résolution de problèmes</h3>
+                                <p class="about-text" data-i18n-html="about.text">
+                                    Mon cursus au sein de l'<strong>École 1337 (42 Network)</strong> a consolidé ma capacité à appréhender des concepts de bas niveau (gestion mémoire, programmation système C/C++) et à résoudre des problématiques architecturales complexes en peer-learning.<br><br>
+                                    J'interviens sur l'ensemble du cycle de développement, depuis la modélisation de bases relationnelles (PostgreSQL, MySQL) jusqu'au déploiement dans le cloud (Heroku, OVH) et l'intégration de maquettes réactives.
+                                </p>
+                                
+                                <!-- Tabs -->
+                                <div class="tabs-header">
+                                    <button class="tab-btn active" id="tab-btn-skills" data-tab="skills" data-i18n="tab.skills">Expertise</button>
+                                    <button class="tab-btn" id="tab-btn-languages" data-tab="languages" data-i18n="tab.languages">Langues</button>
+                                </div>
+                                
+                                <!-- Skills Tab -->
+                                <div class="tab-content active" id="tab-content-skills">
+                                    <div class="skills-grid">
+                                        <div class="skills-category">
+                                            <h4 class="skills-category-title" data-i18n="skills.cat.languages">Langages</h4>
+                                            <div class="skills-list">
+                                                <span class="skill-tag">Java</span>
+                                                <span class="skill-tag">Python</span>
+                                                <span class="skill-tag">PHP</span>
+                                                <span class="skill-tag">JavaScript</span>
+                                                <span class="skill-tag">SQL</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-category">
+                                            <h4 class="skills-category-title" data-i18n="skills.cat.backend">Backend</h4>
+                                            <div class="skills-list">
+                                                <span class="skill-tag">Spring Boot</span>
+                                                <span class="skill-tag">Django / DRF</span>
+                                                <span class="skill-tag">Laravel</span>
+                                                <span class="skill-tag">Hibernate</span>
+                                            </div>
+                                        </div>
+                                        <div class="skills-category">
+                                            <h4 class="skills-category-title" data-i18n="skills.cat.frontend">Frontend</h4>
+                                            <div class="skills-list">
+                                                <span class="skill-tag">Angular</span>
+                                                <span class="skill-tag">HTML5 / CSS3</span>
+                                                <span class="skill-tag">Sass / Grid</span>
+                                                <span class="skill-tag">Bootstrap</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="skills-category">
-                                    <h4 class="skills-category-title">
-                                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-                                        Frameworks Backend
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Spring Boot</span>
-                                        <span class="skill-tag">Django</span>
-                                        <span class="skill-tag">Laravel</span>
-                                        <span class="skill-tag">Hibernate (JPA)</span>
-                                    </div>
-                                </div>
-                                <div class="skills-category">
-                                    <h4 class="skills-category-title">
-                                        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="9" y1="9" x2="21" y2="9"></line></svg>
-                                        Frontend & Design
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Angular</span>
-                                        <span class="skill-tag">HTML5 / CSS3</span>
-                                        <span class="skill-tag">Sass</span>
-                                        <span class="skill-tag">Bootstrap</span>
-                                        <span class="skill-tag">jQuery</span>
-                                    </div>
-                                </div>
-                                <div class="skills-category">
-                                    <h4 class="skills-category-title">
-                                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></svg>
-                                        DevOps & Bases
-                                    </h4>
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Git & GitHub</span>
-                                        <span class="skill-tag">PostgreSQL</span>
-                                        <span class="skill-tag">MySQL</span>
-                                        <span class="skill-tag">Heroku</span>
-                                        <span class="skill-tag">Trello</span>
+                                
+                                <!-- Languages Tab -->
+                                <div class="tab-content" id="tab-content-languages">
+                                    <div class="languages-list">
+                                        <div class="lang-item">
+                                            <span class="lang-info" data-i18n="lang.ar">Arabe</span>
+                                            <span class="lang-level" data-i18n="lang.ar.level">Langue maternelle</span>
+                                        </div>
+                                        <div class="lang-item">
+                                            <span class="lang-info" data-i18n="lang.en">Anglais</span>
+                                            <span class="lang-level" data-i18n="lang.en.level">Avancé / Technique</span>
+                                        </div>
+                                        <div class="lang-item">
+                                            <span class="lang-info" data-i18n="lang.fr">Français</span>
+                                            <span class="lang-level" data-i18n="lang.fr.level">Intermédiaire</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Languages Tab Panel -->
-                        <div class="tab-content" id="tab-content-languages">
-                            <div class="languages-list">
-                                <div class="lang-item">
-                                    <span class="lang-info">Arabe</span>
-                                    <span class="lang-level">Langue maternelle</span>
-                                </div>
-                                <div class="lang-item">
-                                    <span class="lang-info">Anglais</span>
-                                    <span class="lang-level">Avancé / Technique</span>
-                                </div>
-                                <div class="lang-item">
-                                    <span class="lang-info">Français</span>
-                                    <span class="lang-level">Intermédiaire</span>
-                                </div>
+                        <!-- Editorial Metrics Widget below about info -->
+                        <div class="metrics-row">
+                            <div class="metric-item">
+                                <span class="metric-num">1337</span>
+                                <span class="metric-label" data-i18n="metric.label.1">Algorithmique & C/C++</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-num">24+</span>
+                                <span class="metric-label" data-i18n="metric.label.2">Mois de dev actif</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-num">3+</span>
+                                <span class="metric-label" data-i18n="metric.label.3">Frameworks maîtrisés</span>
                             </div>
                         </div>
                     </div>
@@ -286,322 +237,463 @@
             </div>
         </section>
 
-        <!-- Course timeline (Experience & Education) -->
+        <!-- Course Section (Index 02) -->
         <section class="section reveal" id="timeline">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">PARCOURS</span>
-                    <h2 class="section-title">Expériences & Formations</h2>
-                    <p class="section-desc">Mon parcours académique et mes expériences professionnelles dans l'industrie technologique.</p>
-                </div>
-                
-                <div class="timeline-container">
-                    
-                    <!-- Item 1 (Work) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <div class="section-index-grid">
+                    <div class="section-index-num" data-i18n="section.timeline.num">02 // PARCOURS</div>
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-badge" data-i18n="section.timeline.badge">EXPÉRIENCE & ÉDUCATION</span>
+                            <h2 class="section-title" data-i18n="section.timeline.title">Chronologie Technique</h2>
+                            <p class="section-desc" data-i18n="section.timeline.desc">Mon parcours académique et mes interventions logicielles professionnelles.</p>
                         </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">Avr 2023 - Mai 2024</span>
-                            <h3 class="timeline-title">Développeur Full-Stack</h3>
-                            <span class="timeline-org">Automize (CDI / Freelance)</span>
-                            <ul class="timeline-desc">
-                                <li>Développement et optimisation d'applications web réactives avec Python et Django.</li>
-                                <li>Conception et déploiement d'API REST robustes avec Django Rest Framework (DRF).</li>
-                                <li>Hébergement et configuration d'infrastructures cloud sur Heroku et OVH Cloud.</li>
-                                <li>Gestion agile des tâches via Trello et collaboration d'équipe sous Git/GitHub.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 2 (Education) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">En cours</span>
-                            <h3 class="timeline-title">Ingénierie Logicielle</h3>
-                            <span class="timeline-org">École 1337 (42 Network) | Khouribga</span>
-                            <p class="timeline-desc">
-                                Apprentissage auto-géré, axé sur les projets de programmation, l'algorithmique poussée, la gestion de la mémoire, les architectures systèmes et le travail collaboratif en peer-to-peer.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 3 (Work) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">Oct 2022 - Déc 2022</span>
-                            <h3 class="timeline-title">Développeur Full-Stack</h3>
-                            <span class="timeline-org">Bzcorp</span>
-                            <ul class="timeline-desc">
-                                <li>Développement d'une plateforme web innovante et réactive de gestion locative immobilière.</li>
-                                <li>Conception d'une stack technologique moderne combinant Spring Boot pour le backend et Angular pour le frontend.</li>
-                                <li>Optimisation de la modélisation des données avec Hibernate/JPA et base de données MySQL.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 4 (Education) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">En cours</span>
-                            <h3 class="timeline-title">Développement Digital (Full-Stack)</h3>
-                            <span class="timeline-org">OFPPT / ISGI Khouribga (2ème année)</span>
-                            <p class="timeline-desc">
-                                Approfondissement des architectures d'applications d'entreprise, concepts avancés de bases de données, sécurité web, conception web adaptative et frameworks de référence.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 5 (Stage) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">Oct 2021 - Déc 2021</span>
-                            <h3 class="timeline-title">Stage Développeur Backend</h3>
-                            <span class="timeline-org">Diidasko Technology</span>
-                            <ul class="timeline-desc">
-                                <li>Conception modulaire et implémentation de services de données en Spring Boot (Java).</li>
-                                <li>Développement de tests unitaires et intégration continue des modules backend.</li>
-                                <li>Optimisation des performances de traitement et restructuration des endpoints d'API.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 6 (Education) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">Sept 2019 - Juin 2021</span>
-                            <h3 class="timeline-title">Certificat en Développement Web & Mobile</h3>
-                            <span class="timeline-org">YouCode | Youssofia</span>
-                            <p class="timeline-desc">
-                                Formation intensive axée sur l'apprentissage par la pratique, la méthodologie agile Scrum, et les technologies fondamentales du web (JavaScript, PHP, Laravel, bases de données relationnelles).
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 7 (Stage) -->
-                    <div class="timeline-item">
-                        <div class="timeline-node">
-                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
-                        <div class="timeline-content-card">
-                            <span class="timeline-date">Juin 2020 - Août 2020</span>
-                            <h3 class="timeline-title">Stage Développeur Backend</h3>
-                            <span class="timeline-org">STE Inas | Tanger</span>
-                            <p class="timeline-desc">
-                                Conception et développement de modules de gestion administrative interne à l'aide du framework PHP Laravel, couplé à une base de données relationnelle MySQL.
-                            </p>
+                        
+                        <div class="timeline-container">
+                            
+                            <!-- Item 1 (1337) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.1.date">2025 - Présent</span>
+                                    <span class="timeline-org" data-i18n="tl.1.org">École 1337 | 42 Network</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.1.title">Cursus Ingénierie Logicielle</h3>
+                                    <p class="timeline-desc" data-i18n="tl.1.desc">
+                                        Apprentissage rigoureux basé sur la peer-education, axé sur les architectures systèmes (C/C++), la gestion d'allocation mémoire, l'algorithmique complexe et la gestion d'infrastructure.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 (OFPPT) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.2.date">2024 - Présent</span>
+                                    <span class="timeline-org" data-i18n="tl.2.org">OFPPT / ISGI Khouribga</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.2.title">Développement Digital (Full-Stack)</h3>
+                                    <p class="timeline-desc" data-i18n="tl.2.desc">
+                                        Formation approfondie axée sur les patrons de conception (Design Patterns), l'administration de bases de données et la sécurisation des architectures web d'entreprise.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 (Automize) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.3.date">Avr 2023 - Mai 2024</span>
+                                    <span class="timeline-org" data-i18n="tl.3.org">Automize | Freelance</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.3.title">Développeur Full-Stack</h3>
+                                    <ul class="timeline-desc" data-i18n-html="tl.3.desc">
+                                        <li>Développement d'applications et de services web sous Django et Python.</li>
+                                        <li>Conception et documentation d'APIs REST asynchrones (Django Rest Framework).</li>
+                                        <li>Déploiement, configuration d'infrastructures et hébergement sous Heroku et OVH Cloud.</li>
+                                        <li>Gestion continue du code source et collaboration via Git/GitHub.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 4 (Bzcorp) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.4.date">2022</span>
+                                    <span class="timeline-org" data-i18n="tl.4.org">Bzcorp</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.4.title">Développeur Full-Stack</h3>
+                                    <ul class="timeline-desc" data-i18n-html="tl.4.desc">
+                                        <li>Conception et développement d'une plateforme de gestion locative immobilière.</li>
+                                        <li>Mise en place de la stack technique : Spring Boot (Java) pour l'API et Angular pour le frontend.</li>
+                                        <li>Modélisation des tables et intégration de la base de données relationnelle MySQL (JPA/Hibernate).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 5 (Diidasko) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.5.date">Oct 2021 - Déc 2021</span>
+                                    <span class="timeline-org" data-i18n="tl.5.org">Diidasko Technology</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.5.title">Stage Développeur Backend</h3>
+                                    <ul class="timeline-desc" data-i18n-html="tl.5.desc">
+                                        <li>Développement de microservices de données complexes en Spring Boot.</li>
+                                        <li>Écriture et automatisation de plans de tests unitaires et d'intégration.</li>
+                                        <li>Optimisation de requêtes SQL complexes et restructuration des réponses JSON.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 6 (YouCode) -->
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-date" data-i18n="tl.6.date">2019 - 2021</span>
+                                    <span class="timeline-org" data-i18n="tl.6.org">YouCode | Youssofia</span>
+                                </div>
+                                <div class="timeline-details">
+                                    <h3 class="timeline-title" data-i18n="tl.6.title">Formation Développement Web</h3>
+                                    <p class="timeline-desc" data-i18n="tl.6.desc">
+                                        Formation intensive axée sur l'apprentissage par la pratique en méthode Agile (Scrum) et l'intégration des concepts MVC (PHP, Laravel, JavaScript, MySQL).
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Showcase Section -->
+        <!-- Projects Showcase Section (Index 03) -->
         <section class="section reveal" id="projects">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">RÉALISATIONS</span>
-                    <h2 class="section-title">Mes Projets</h2>
-                    <p class="section-desc">Une sélection d'applications réelles conçues avec des technologies modernes.</p>
-                </div>
-                
-                <!-- Portfolio Filters -->
-                <div class="portfolio-filters">
-                    <button class="filter-btn active" id="filter-btn-all" data-filter="all">Tous</button>
-                    <button class="filter-btn" id="filter-btn-fullstack" data-filter="fullstack">Full-Stack</button>
-                    <button class="filter-btn" id="filter-btn-backend" data-filter="backend">Back-End</button>
-                    <button class="filter-btn" id="filter-btn-frontend" data-filter="frontend">Front-End</button>
-                </div>
-                
-                <!-- Portfolio Projects Grid -->
-                <div class="projects-grid" id="projects-grid">
-                    
-                    <!-- Project 1 (RentEase - Fullstack) -->
-                    <div class="project-card" data-category="fullstack">
-                        <div class="project-img-wrapper">
-                            <img src="assets/images/rentease_placeholder.jpg" alt="RentEase Platform" id="project-img-1">
-                            <div class="project-overlay">
-                                <span class="btn btn-primary project-link-btn" data-project-id="rentease">Détails du projet</span>
-                            </div>
+                <div class="section-index-grid">
+                    <div class="section-index-num" data-i18n="section.projects.num">03 // PROJETS</div>
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-badge" data-i18n="section.projects.badge">SELECTED WORKS</span>
+                            <h2 class="section-title" data-i18n="section.projects.title">Applications Conçues</h2>
+                            <p class="section-desc" data-i18n="section.projects.desc">Une sélection d'applications réelles conçues avec des technologies industrielles.</p>
                         </div>
-                        <div class="project-card-body">
-                            <div class="project-tags">
-                                <span class="project-tag">Spring Boot</span>
-                                <span class="project-tag">Angular</span>
-                                <span class="project-tag">PostgreSQL</span>
-                            </div>
-                            <h3 class="project-title">RentEase</h3>
-                            <p class="project-desc">
-                                Plateforme moderne de gestion locative facilitant l'interaction entre propriétaires et locataires pour simplifier les contrats et paiements.
-                            </p>
-                            <span class="project-link-btn" data-project-id="rentease">
-                                En savoir plus
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </span>
+                        
+                        <!-- Filters -->
+                        <div class="portfolio-filters">
+                            <button class="filter-btn active" id="filter-btn-all" data-filter="all" data-i18n="filter.all">Tous les projets</button>
+                            <button class="filter-btn" id="filter-btn-fullstack" data-filter="fullstack" data-i18n="filter.fullstack">Full-Stack</button>
+                            <button class="filter-btn" id="filter-btn-backend" data-filter="backend" data-i18n="filter.backend">Back-End</button>
+                            <button class="filter-btn" id="filter-btn-frontend" data-filter="frontend" data-i18n="filter.frontend">Front-End</button>
                         </div>
-                    </div>
-                    
-                    <!-- Project 2 (Automize - Python/Django) -->
-                    <div class="project-card" data-category="backend">
-                        <div class="project-img-wrapper">
-                            <img src="assets/images/automize_placeholder.jpg" alt="Automize REST APIs" id="project-img-2">
-                            <div class="project-overlay">
-                                <span class="btn btn-primary project-link-btn" data-project-id="automize">Détails du projet</span>
+                        
+                        <!-- Grid -->
+                        <div class="projects-grid" id="projects-grid">
+                            
+                            <!-- Project 1 (RentEase) -->
+                            <div class="project-card" data-category="fullstack">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/rentease_ui.png" alt="Plateforme RentEase" id="project-img-1">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="rentease" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">Spring Boot</span>
+                                        <span class="project-tag">Angular</span>
+                                        <span class="project-tag">PostgreSQL</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.rentease.title">RentEase</h3>
+                                    <p class="project-desc" data-i18n="project.rentease.desc">
+                                        Plateforme de gestion locative immobilière facilitant l'interaction opérationnelle entre propriétaires et locataires.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="rentease" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-card-body">
-                            <div class="project-tags">
-                                <span class="project-tag">Django DRF</span>
-                                <span class="project-tag">Python</span>
-                                <span class="project-tag">Heroku</span>
+                            
+                            <!-- Project 2 (Automize) -->
+                            <div class="project-card" data-category="backend">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/automize_api.png" alt="API Services Automize" id="project-img-2">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="automize" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">Django DRF</span>
+                                        <span class="project-tag">Python</span>
+                                        <span class="project-tag">PostgreSQL</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.automize.title">Automize REST Services</h3>
+                                    <p class="project-desc" data-i18n="project.automize.desc">
+                                        Architecture d'APIs REST asynchrones hautement sécurisées pour l'automatisation de flux administratifs en entreprise.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="automize" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
                             </div>
-                            <h3 class="project-title">Automize REST Services</h3>
-                            <p class="project-desc">
-                                APIs RESTful hautement sécurisées pour l'automatisation de tâches internes, assurant des temps de réponse optimaux.
-                            </p>
-                            <span class="project-link-btn" data-project-id="automize">
-                                En savoir plus
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 (Larastore - Laravel backend) -->
-                    <div class="project-card" data-category="backend">
-                        <div class="project-img-wrapper">
-                            <img src="assets/images/larastore_placeholder.jpg" alt="Laravel Backend Portal" id="project-img-3">
-                            <div class="project-overlay">
-                                <span class="btn btn-primary project-link-btn" data-project-id="larastore">Détails du projet</span>
+                            
+                            <!-- Project 3 (Larastore) -->
+                            <div class="project-card" data-category="backend">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/inas_admin.png" alt="Inas Admin Portal" id="project-img-3">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="larastore" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">Laravel</span>
+                                        <span class="project-tag">MySQL</span>
+                                        <span class="project-tag">Blade</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.larastore.title">Inas Admin Hub</h3>
+                                    <p class="project-desc" data-i18n="project.larastore.desc">
+                                        Portail interne de suivi d'approvisionnement et de centralisation des indicateurs d'achat.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="larastore" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-card-body">
-                            <div class="project-tags">
-                                <span class="project-tag">Laravel</span>
-                                <span class="project-tag">MySQL</span>
-                                <span class="project-tag">Eloquent</span>
+                            <!-- Project 4 (Cultural Events) -->
+                            <div class="project-card" data-category="frontend">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/cultural_events.png" alt="Cultural Moroccan Events" id="project-img-4">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="culturalevents" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">JavaScript</span>
+                                        <span class="project-tag">HTML5 / CSS3</span>
+                                        <span class="project-tag">API REST</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.culturalevents.title">Cultural Moroccan Events</h3>
+                                    <p class="project-desc" data-i18n="project.culturalevents.desc">
+                                        Plateforme de découverte d'événements culturels marocains en temps réel, avec filtres par région et catégorie.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="culturalevents" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
                             </div>
-                            <h3 class="project-title">Inas Admin Hub</h3>
-                            <p class="project-desc">
-                                Portail d'administration pour le suivi d'indicateurs de vente et la synchronisation de données clients développé sous Laravel.
-                            </p>
-                            <span class="project-link-btn" data-project-id="larastore">
-                                En savoir plus
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                            </span>
+
+                            <!-- Project 5 (Quordle) -->
+                            <div class="project-card" data-category="frontend">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/quordle_game.png" alt="Quordle Game" id="project-img-5">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="quordle" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">JavaScript</span>
+                                        <span class="project-tag">HTML5 / CSS3</span>
+                                        <span class="project-tag">Game Logic</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.quordle.title">Quordle Game</h3>
+                                    <p class="project-desc" data-i18n="project.quordle.desc">
+                                        Jeu de mots interactif inspiré de Wordle, permettant de deviner 4 mots simultanément avec animations temps réel.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="quordle" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Project 6 (Knowplus) -->
+                            <div class="project-card" data-category="fullstack">
+                                <div class="project-img-wrapper">
+                                    <img src="assets/images/knowplus_learning.png" alt="Knowplus" id="project-img-6">
+                                    <div class="project-overlay">
+                                        <span class="project-link-btn overlay-icon-btn" data-project-id="knowplus" aria-label="View Project">
+                                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="project-card-body">
+                                    <div class="project-tags">
+                                        <span class="project-tag">Django</span>
+                                        <span class="project-tag">Python</span>
+                                        <span class="project-tag">Full-Stack</span>
+                                    </div>
+                                    <h3 class="project-title" data-i18n="project.knowplus.title">Knowplus</h3>
+                                    <p class="project-desc" data-i18n="project.knowplus.desc">
+                                        Plateforme e-learning belge permettant la gestion de cours, modules et utilisateurs avec tableau de bord interactif.
+                                    </p>
+                                    <span class="project-link-btn" data-project-id="knowplus" data-i18n="project.link.details">
+                                        Détails du projet <span class="arrow">&rarr;</span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section reveal" id="contact">
+        <!-- Services Section (Index 05) -->
+        <section class="section reveal" id="services">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-badge">CONTACT</span>
-                    <h2 class="section-title">Coordonnées & Message</h2>
-                    <p class="section-desc">Vous avez un projet en tête ou souhaitez simplement échanger ? Parlons-en !</p>
-                </div>
-                
-                <div class="contact-grid">
-                    <!-- Contact Coordinates -->
-                    <div class="contact-info">
-                        <h3 class="contact-info-title">Discutons de votre projet</h3>
-                        <p class="contact-info-desc">
-                            Je suis disponible pour des opportunités de stage de fin d'études, de collaborations en freelance ou des postes de développeur Full-Stack. N'hésitez pas à me joindre via les canaux ci-dessous.
-                        </p>
-                        
-                        <div class="contact-cards">
-                            <!-- Phone -->
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <div class="section-index-grid">
+                    <div class="section-index-num" data-i18n="section.services.num">05 // SERVICES</div>
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-badge" data-i18n="section.services.badge">CE QUE JE FAIS</span>
+                            <h2 class="section-title" data-i18n="section.services.title">Expertises Proposées</h2>
+                            <p class="section-desc" data-i18n="section.services.desc">Des solutions logicielles complètes, du back-end robuste aux interfaces réactives et aux APIs scalables.</p>
+                        </div>
+
+                        <div class="services-grid">
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                                 </div>
-                                <div class="contact-card-details">
-                                    <span class="contact-card-label">Téléphone</span>
-                                    <a href="tel:+212617198646" class="contact-card-value">+212 617 198 646</a>
-                                </div>
+                                <h3 class="service-title" data-i18n="service.fullstack.title">Développement Full-Stack</h3>
+                                <p class="service-desc" data-i18n="service.fullstack.desc">Conception d'applications web complètes avec Python/Django, Java/Spring Boot et Angular — de la base de données à l'interface utilisateur.</p>
                             </div>
-                            
-                            <!-- Email -->
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                                 </div>
-                                <div class="contact-card-details">
-                                    <span class="contact-card-label">Email</span>
-                                    <a href="mailto:mohamed.zoubir.dev@gmail.com" class="contact-card-value">mohamed.zoubir.dev@gmail.com</a>
-                                </div>
+                                <h3 class="service-title" data-i18n="service.backend.title">Développement Back-End</h3>
+                                <p class="service-desc" data-i18n="service.backend.desc">Architecture de services back-end robustes et scalables utilisant Spring Boot, Django, Laravel et Hibernate avec bases de données relationnelles.</p>
                             </div>
-                            
-                            <!-- Location -->
-                            <div class="contact-card">
-                                <div class="contact-card-icon">
-                                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
                                 </div>
-                                <div class="contact-card-details">
-                                    <span class="contact-card-label">Adresse</span>
-                                    <span class="contact-card-value">Beni Mellal, Maroc</span>
-                                </div>
+                                <h3 class="service-title" data-i18n="service.api.title">APIs REST &amp; Microservices</h3>
+                                <p class="service-desc" data-i18n="service.api.desc">Conception et documentation d'APIs REST asynchrones, sécurisées par JWT, avec authentification avancée et déploiement cloud (Heroku, OVH).</p>
                             </div>
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                </div>
+                                <h3 class="service-title" data-i18n="service.frontend.title">Développement Front-End</h3>
+                                <p class="service-desc" data-i18n="service.frontend.desc">Création d'interfaces dynamiques et réactives avec Angular, HTML5, CSS3 et JavaScript — centrées sur la performance et l'expérience utilisateur.</p>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                </div>
+                                <h3 class="service-title" data-i18n="service.ecommerce.title">Solutions E-Commerce</h3>
+                                <p class="service-desc" data-i18n="service.ecommerce.desc">Développement de boutiques en ligne performantes et sécurisées, avec paniers, paiements et tableaux de bord de gestion intégrés.</p>
+                            </div>
+
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                                </div>
+                                <h3 class="service-title" data-i18n="service.db.title">Architecture Base de Données</h3>
+                                <p class="service-desc" data-i18n="service.db.desc">Modélisation relationnelle et optimisation de requêtes SQL complexes avec PostgreSQL, MySQL et intégration ORM (Hibernate, Eloquent).</p>
+                            </div>
+
                         </div>
                     </div>
-                    
-                    <!-- Contact Form Wrapper -->
-                    <div class="contact-form-wrapper">
-                        <!-- Success message template overlay -->
-                        <div class="form-success-overlay" id="form-success">
-                            <div class="success-icon-wrapper">
-                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            </div>
-                            <h3>Message envoyé avec succès !</h3>
-                            <p>Merci pour votre intérêt, Mohamed vous recontactera dans les plus brefs délais.</p>
-                            <button class="btn btn-primary" id="btn-success-reset" style="margin-top: 24px;">Envoyer un autre message</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Index 06) -->
+        <section class="section reveal" id="contact">
+            <div class="container">
+                <div class="section-index-grid">
+                    <div class="section-index-num" data-i18n="section.contact.num">06 // COMMENCER</div>
+                    <div class="section-content">
+                        <div class="section-header">
+                            <span class="section-badge" data-i18n="section.contact.badge">DISPONIBILITÉ</span>
+                            <h2 class="section-title" data-i18n="section.contact.title">Coordonnées</h2>
+                            <p class="section-desc" data-i18n="section.contact.desc">Je suis à votre disposition pour toute proposition de collaboration ou opportunité de stage.</p>
                         </div>
                         
-                        <form id="contact-form" autocomplete="off">
-                            <div class="form-group-row">
-                                <div class="form-group">
-                                    <input type="text" id="contact-name" class="form-input" placeholder=" " required>
-                                    <label class="form-label" for="contact-name">Nom complet</label>
+                        <div class="contact-grid">
+                            <!-- Info -->
+                            <div class="contact-info">
+                                <h3 class="contact-info-title" data-i18n="contact.info.title">Discutons de vos besoins</h3>
+                                <p class="contact-info-desc" data-i18n="contact.info.desc">
+                                    Je suis à votre disposition pour étudier vos propositions de projets, opportunités de stage de fin d'études ou collaborations techniques.
+                                </p>
+                                
+                                <div class="contact-cards">
+                                    <!-- Phone -->
+                                    <div class="contact-card">
+                                        <div class="contact-card-icon">
+                                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        </div>
+                                        <div class="contact-card-details">
+                                            <span class="contact-card-label" data-i18n="contact.phone.label">Téléphone</span>
+                                            <a href="tel:+212617198646" class="contact-card-value">+212 617 198 646</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Email -->
+                                    <div class="contact-card">
+                                        <div class="contact-card-icon">
+                                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        </div>
+                                        <div class="contact-card-details">
+                                            <span class="contact-card-label" data-i18n="contact.email.label">Email</span>
+                                            <a href="mailto:mohamed.zoubir.dev@gmail.com" class="contact-card-value">mohamed.zoubir.dev@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Location -->
+                                    <div class="contact-card">
+                                        <div class="contact-card-icon">
+                                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        </div>
+                                        <div class="contact-card-details">
+                                            <span class="contact-card-label" data-i18n="contact.location.label">Adresse</span>
+                                            <span class="contact-card-value" data-i18n="contact.location.val">Beni Mellal, Maroc</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" id="contact-email" class="form-input" placeholder=" " required>
-                                    <label class="form-label" for="contact-email">Email</label>
+                            </div>
+                            
+                            <!-- Form -->
+                            <div class="contact-form-wrapper">
+                                <!-- Success -->
+                                <div class="form-success-overlay" id="form-success">
+                                    <div class="success-icon-wrapper">
+                                        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    </div>
+                                    <h3 data-i18n="form.success.title">Message envoyé</h3>
+                                    <p data-i18n="form.success.desc">Merci pour votre message. Je vous recontacterai rapidement.</p>
+                                    <button class="btn btn-secondary" id="btn-success-reset" style="margin-top: 24px;" data-i18n="form.success.btn">Envoyer un autre message</button>
                                 </div>
+                                
+                                <form id="contact-form" autocomplete="on">
+                                    <div class="form-group-row">
+                                        <div class="form-group">
+                                            <label class="form-label" for="contact-name" data-i18n="form.name.label">Nom complet</label>
+                                            <input type="text" id="contact-name" name="name" autocomplete="name" class="form-input" required data-i18n-placeholder="form.name.placeholder" placeholder="Votre nom">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="contact-email" data-i18n="form.email.label">Email</label>
+                                            <input type="email" id="contact-email" name="email" autocomplete="email" class="form-input" required data-i18n-placeholder="form.email.placeholder" placeholder="votre@email.com">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="contact-subject" data-i18n="form.subject.label">Objet</label>
+                                        <input type="text" id="contact-subject" name="subject" class="form-input" required data-i18n-placeholder="form.subject.placeholder" placeholder="Objet du message">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label" for="contact-message" data-i18n="form.message.label">Votre message</label>
+                                        <textarea id="contact-message" name="message" class="form-input" required data-i18n-placeholder="form.message.placeholder" placeholder="Votre message..."></textarea>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary" id="contact-submit" style="width: 100%; justify-content: center;" data-i18n="form.submit">
+                                        Envoyer le message
+                                    </button>
+                                </form>
                             </div>
-                            
-                            <div class="form-group">
-                                <input type="text" id="contact-subject" class="form-input" placeholder=" " required>
-                                    <label class="form-label" for="contact-subject">Objet</label>
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea id="contact-message" class="form-input" placeholder=" " required></textarea>
-                                <label class="form-label" for="contact-message">Votre message</label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary" id="contact-submit" style="width: 100%; justify-content: center;">
-                                Envoyer le message
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -615,33 +707,30 @@
             <div class="footer-logo">
                 M.Zoubir
             </div>
-            <div class="footer-copy">
+            <div class="footer-copy" data-i18n="footer.copy">
                 &copy; 2026 Mohamed Zoubir. Tous droits réservés.
             </div>
             <div class="footer-socials">
-                <a href="#" class="footer-social-btn" aria-label="GitHub">
+                <a href="https://github.com/mdzoubir" target="_blank" rel="noopener" class="footer-social-btn" aria-label="GitHub">
                     <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
-                <a href="#" class="footer-social-btn" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mohamed-zoubir/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
                     <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="#" class="footer-social-btn" aria-label="Globe">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Details Modals (Populated statically for instant SEO and client reliability) -->
+    <!-- Details Modals -->
     
-    <!-- RentEase Modal -->
+    <!-- RentEase -->
     <div class="modal" id="modal-rentease">
         <div class="modal-backdrop"></div>
         <div class="modal-container">
-            <button class="modal-close-btn" aria-label="Fermer la modal">
+            <button class="modal-close-btn" aria-label="Fermer">
                 <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-            <img src="assets/images/rentease_placeholder.jpg" alt="RentEase Modal Banner" class="modal-hero-img" id="modal-img-rentease">
+            <img src="assets/images/rentease_ui.png" alt="RentEase Banner" class="modal-hero-img">
             <div class="modal-content-wrapper">
                 <div class="modal-header">
                     <div class="modal-tags">
@@ -658,7 +747,7 @@
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Date</div>
-                        <div class="meta-val">Octobre - Décembre 2022</div>
+                        <div class="meta-val">Oct - Déc 2022</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Client</div>
@@ -667,40 +756,38 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        <strong>RentEase</strong> est une solution logicielle complète conçue pour simplifier la location et la gestion immobilière. Elle permet aux propriétaires de gérer leurs biens de manière proactive et offre aux locataires un espace moderne pour le suivi de leurs contrats et paiements.
+                        <strong>RentEase</strong> est une plateforme de gestion locative immobilière conçue pour simplifier les interactions contractuelles et le suivi opérationnel entre les propriétaires et les locataires.
                     </p>
-                    <h3 class="modal-subtitle">Fonctionnalités clés</h3>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
                     <ul class="modal-features-list">
-                        <li>Tableau de bord dynamique pour l'analyse des revenus et le taux d'occupation des propriétés.</li>
-                        <li>Gestion de contrats de bail dématérialisés avec signature électronique fictive.</li>
-                        <li>Système de tickets de réclamations avec notification en temps réel pour le traitement des pannes de maintenance.</li>
-                        <li>Base de données relationnelle hautement normalisée conçue sous PostgreSQL et gérée par Hibernate.</li>
+                        <li>Tableau de bord de suivi financier et taux d'occupation en temps réel.</li>
+                        <li>Gestion dématérialisée des contrats de location.</li>
+                        <li>Système d'émission et de résolution des demandes de maintenance.</li>
+                        <li>Base de données normalisée implémentée sous PostgreSQL.</li>
                     </ul>
-                    <h3 class="modal-subtitle">Technologies employées</h3>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
                     <p>
-                        <strong>Backend :</strong> Java 17, Spring Boot, Spring Security (JWT), Hibernate, JPA.<br>
-                        <strong>Frontend :</strong> Angular 14, RxJS, TypeScript, TailwindCSS.<br>
-                        <strong>Base de données :</strong> PostgreSQL, MySQL.
+                        Java 17, Spring Boot, Spring Security (JWT), Hibernate, Angular 14, PostgreSQL.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Automize Modal -->
+    <!-- Automize -->
     <div class="modal" id="modal-automize">
         <div class="modal-backdrop"></div>
         <div class="modal-container">
-            <button class="modal-close-btn" aria-label="Fermer la modal">
+            <button class="modal-close-btn" aria-label="Fermer">
                 <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-            <img src="assets/images/automize_placeholder.jpg" alt="Automize Modal Banner" class="modal-hero-img" id="modal-img-automize">
+            <img src="assets/images/automize_api.png" alt="Automize REST APIs" class="modal-hero-img">
             <div class="modal-content-wrapper">
                 <div class="modal-header">
                     <div class="modal-tags">
                         <span class="project-tag">Django DRF</span>
                         <span class="project-tag">Python</span>
-                        <span class="project-tag">OVH Cloud</span>
+                        <span class="project-tag">Heroku</span>
                     </div>
                     <h2 class="modal-title">Automize REST Services</h2>
                 </div>
@@ -711,48 +798,47 @@
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Date</div>
-                        <div class="meta-val">Avril 2023 - Mai 2024</div>
+                        <div class="meta-val">Avr 2023 - Mai 2024</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Client</div>
-                        <div class="meta-val">Automize Ltd</div>
+                        <div class="meta-val">Automize</div>
                     </div>
                 </div>
                 <div class="modal-body">
                     <p>
-                        Conception et déploiement d'une série de services web automatisés et d'API REST asynchrones pour accélérer les processus internes d'entreprise, diminuant les erreurs manuelles et améliorant la réactivité des systèmes.
+                        Mise en œuvre d'APIs REST asynchrones pour l'automatisation de flux administratifs et le traitement de tâches complexes d'arrière-plan.
                     </p>
-                    <h3 class="modal-subtitle">Fonctionnalités clés</h3>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
                     <ul class="modal-features-list">
-                        <li>Création d'API RESTful robustes à l'aide de Django Rest Framework et sérialiseurs complexes.</li>
-                        <li>Automatisation de pipelines de données en arrière-plan à l'aide de Workers asynchrones.</li>
-                        <li>Mise en œuvre d'authentification basée sur les rôles et intégrations d'API externes d'analyse.</li>
-                        <li>Déploiement continu automatisé et mise en production fluide sous Heroku et OVH Cloud.</li>
+                        <li>Conception de routes d'API hautement structurées via Django Rest Framework.</li>
+                        <li>Workers asynchrones pour le traitement en tâche de fond.</li>
+                        <li>Intégration sécurisée et authentification par clés d'API.</li>
+                        <li>Hébergement et monitoring sous Heroku et OVH Cloud.</li>
                     </ul>
-                    <h3 class="modal-subtitle">Technologies employées</h3>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
                     <p>
-                        <strong>Stack logicielle :</strong> Python, Django, Django Rest Framework (DRF), Gunicorn.<br>
-                        <strong>Infrastructures & DevOps :</strong> Heroku, OVH Cloud, PostgreSQL, Git, Trello.
+                        Python, Django, Django Rest Framework, PostgreSQL, Heroku.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Larastore Modal -->
+    <!-- Larastore -->
     <div class="modal" id="modal-larastore">
         <div class="modal-backdrop"></div>
         <div class="modal-container">
-            <button class="modal-close-btn" aria-label="Fermer la modal">
+            <button class="modal-close-btn" aria-label="Fermer">
                 <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-            <img src="assets/images/larastore_placeholder.jpg" alt="Inas Admin Modal Banner" class="modal-hero-img" id="modal-img-larastore">
+            <img src="assets/images/inas_admin.png" alt="Inas Admin Hub" class="modal-hero-img">
             <div class="modal-content-wrapper">
                 <div class="modal-header">
                     <div class="modal-tags">
                         <span class="project-tag">Laravel</span>
                         <span class="project-tag">MySQL</span>
-                        <span class="project-tag">Bootstrap</span>
+                        <span class="project-tag">Blade</span>
                     </div>
                     <h2 class="modal-title">Inas Admin Hub</h2>
                 </div>
@@ -772,21 +858,159 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        Développement d'une application intranet robuste de centralisation administrative pour la gestion des fournisseurs, suivi des approvisionnements et tableaux de bord financiers pour les responsables d'équipes.
+                        Création d'une application intranet d'administration des données, permettant la centralisation des flux de commandes et la gestion de la relation avec les fournisseurs.
                     </p>
-                    <h3 class="modal-subtitle">Fonctionnalités clés</h3>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
                     <ul class="modal-features-list">
-                        <li>Architecture de tables relationnelles complexes optimisées via Laravel Eloquent ORM.</li>
-                        <li>Système d'authentification robuste avec réinitialisation de mot de passe par courriel sécurisé.</li>
-                        <li>Exports de rapports tabulaires financiers vers des formats PDF et CSV.</li>
-                        <li>Interface utilisateur adaptative, soignée et facile d'utilisation intégrant Bootstrap CSS.</li>
+                        <li>Architecture de tables relationnelles optimisées via Laravel Eloquent ORM.</li>
+                        <li>Panneau d'administration sécurisé avec gestion des droits d'utilisateurs.</li>
+                        <li>Exportation automatisée de rapports tabulaires en PDF et Excel.</li>
                     </ul>
-                    <h3 class="modal-subtitle">Technologies employées</h3>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
                     <p>
-                        <strong>Backend :</strong> PHP, Laravel, Blade Templates.<br>
-                        <strong>Base de données :</strong> MySQL, migrations structurées.<br>
-                        <strong>Frontend :</strong> Bootstrap, CSS3, JavaScript, jQuery.
+                        PHP, Laravel, MySQL, Blade Templates, Bootstrap.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cultural Events -->
+    <div class="modal" id="modal-culturalevents">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Fermer">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <img src="assets/images/cultural_events.png" alt="Cultural Moroccan Events" class="modal-hero-img">
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <div class="modal-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML5 / CSS3</span>
+                        <span class="project-tag">API REST</span>
+                    </div>
+                    <h2 class="modal-title">Cultural Moroccan Events</h2>
+                </div>
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <div class="meta-label">Rôle</div>
+                        <div class="meta-val">Développeur Front-End</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Lien Live</div>
+                        <div class="meta-val"><a href="https://cultural-event-finder.vercel.app/" target="_blank" rel="noopener" style="color:var(--accent)">cultural-event-finder.vercel.app</a></div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">GitHub</div>
+                        <div class="meta-val"><a href="https://github.com/mdzoubir/Cultural-Event-Finder" target="_blank" rel="noopener" style="color:var(--accent)">Voir le code</a></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Plateforme de découverte d'événements culturels marocains permettant aux utilisateurs d'explorer des événements par région et catégorie en temps réel.</p>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
+                    <ul class="modal-features-list">
+                        <li>Interface de filtrage dynamique par région et type d'événement.</li>
+                        <li>Affichage responsive et accessible sur mobile et desktop.</li>
+                        <li>Intégration d'API REST pour la récupération des données en temps réel.</li>
+                        <li>Déployé en production sur Vercel.</li>
+                    </ul>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
+                    <p>JavaScript (Vanilla), HTML5, CSS3, API REST, Vercel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quordle -->
+    <div class="modal" id="modal-quordle">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Fermer">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <img src="assets/images/quordle_game.png" alt="Quordle Game" class="modal-hero-img">
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <div class="modal-tags">
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">HTML5 / CSS3</span>
+                        <span class="project-tag">Game Logic</span>
+                    </div>
+                    <h2 class="modal-title">Quordle Game</h2>
+                </div>
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <div class="meta-label">Rôle</div>
+                        <div class="meta-val">Développeur Front-End</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Lien Live</div>
+                        <div class="meta-val"><a href="https://quordle-game.vercel.app/" target="_blank" rel="noopener" style="color:var(--accent)">quordle-game.vercel.app</a></div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">GitHub</div>
+                        <div class="meta-val"><a href="https://github.com/mdzoubir/quordle-game" target="_blank" rel="noopener" style="color:var(--accent)">Voir le code</a></div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Jeu de mots interactif inspiré de Wordle permettant de deviner simultanément 4 mots différents avec un système de tuiles colorées et d'animations fluides.</p>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
+                    <ul class="modal-features-list">
+                        <li>Logique de jeu complète avec validation des mots en temps réel.</li>
+                        <li>Grilles multiples synchronisées pour 4 mots simultanés.</li>
+                        <li>Animations CSS fluides pour le feedback des lettres correctes/incorrectes.</li>
+                        <li>Gestion d'état côté client sans dépendances externes.</li>
+                    </ul>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
+                    <p>JavaScript (Vanilla), HTML5, CSS3 Animations, Vercel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Knowplus -->
+    <div class="modal" id="modal-knowplus">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Fermer">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <img src="assets/images/knowplus_learning.png" alt="Knowplus" class="modal-hero-img">
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <div class="modal-tags">
+                        <span class="project-tag">Django</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Full-Stack</span>
+                    </div>
+                    <h2 class="modal-title">Knowplus</h2>
+                </div>
+                <div class="modal-meta-grid">
+                    <div class="meta-item">
+                        <div class="meta-label">Rôle</div>
+                        <div class="meta-val">Développeur Full-Stack</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Lien Live</div>
+                        <div class="meta-val"><a href="https://www.knowplus.be/" target="_blank" rel="noopener" style="color:var(--accent)">knowplus.be</a></div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Client</div>
+                        <div class="meta-val">Knowplus (Belgique)</div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Plateforme e-learning belge complète permettant la création et gestion de cours en ligne, avec tableau de bord administrateur, suivi de progression et gestion des utilisateurs.</p>
+                    <h3 class="modal-subtitle">Caractéristiques du projet</h3>
+                    <ul class="modal-features-list">
+                        <li>Système de gestion de cours avec modules et leçons structurées.</li>
+                        <li>Tableau de bord administrateur pour le suivi des apprenants.</li>
+                        <li>Authentification sécurisée et gestion des rôles utilisateurs.</li>
+                        <li>Interface réactive et intuitive centrée sur l'expérience apprenant.</li>
+                    </ul>
+                    <h3 class="modal-subtitle">Stack Technique</h3>
+                    <p>Python, Django, PostgreSQL, HTML5, CSS3, JavaScript.</p>
                 </div>
             </div>
         </div>
