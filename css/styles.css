@@ -664,15 +664,19 @@ svg { display: block; }
   width: 260px;
   height: 280px;
   margin: 0 auto 20px;
+  padding: 2px;
+  border-radius: calc(var(--radius-xl) + 2px);
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
 }
 .avatar-img {
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   border-radius: var(--radius-xl);
-  filter: grayscale(20%);
+  filter: grayscale(10%);
   transition: filter var(--t-slow);
 }
-.avatar-wrapper:hover .avatar-img { filter: grayscale(0%); }
+.avatar-wrapper:hover .avatar-img { filter: grayscale(0%) brightness(1.05); }
 .avatar-initials {
   width: 100%; height: 100%;
   border-radius: var(--radius-xl);
@@ -694,14 +698,7 @@ svg { display: block; }
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.04em;
 }
-.avatar-ring {
-  position: absolute;
-  inset: -6px;
-  border-radius: calc(var(--radius-xl) + 6px);
-  border: 1.5px solid var(--blue);
-  opacity: 0.3;
-  pointer-events: none;
-}
+.avatar-ring { display: none; }
 .avatar-badge {
   position: absolute;
   bottom: -10px; left: 50%;
