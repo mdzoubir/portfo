@@ -684,5 +684,52 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.classList.add('loading');
     }, { capture: true });
   }
+  /* ============================================================
+     PAGE LOADER — dismiss after load
+     ============================================================ */
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    window.addEventListener('load', () => {
+      setTimeout(() => loader.classList.add('hidden'), 300);
+      // Remove from DOM after transition
+      setTimeout(() => loader.remove(), 800);
+    });
+  }
+
+  /* ============================================================
+     BACK TO TOP BUTTON
+     ============================================================ */
+  const backToTop = document.getElementById('back-to-top');
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ============================================================
+     ANIMATED PAGE TITLE — cycles in browser tab
+     ============================================================ */
+  const pageTitles = ['Mohamed Zoubir', 'Full-Stack Developer', '1337 Student'];
+  let titleIdx = 0;
+  let titleVisible = true;
+
+  document.addEventListener('visibilitychange', () => {
+    titleVisible = !document.hidden;
+    if (titleVisible) {
+      document.title = 'Mohamed Zoubir | Développeur Full-Stack';
+      titleIdx = 0;
+    }
+  });
+
+  setInterval(() => {
+    if (!titleVisible) {
+      document.title = pageTitles[titleIdx % pageTitles.length];
+      titleIdx++;
+    }
+  }, 2000);
 
 });
