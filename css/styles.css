@@ -850,13 +850,13 @@ svg { display: block; }
    ============================================================ */
 .timeline {
   position: relative;
-  padding-left: 40px;
+  padding-left: 44px;
   margin-top: 0;
 }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 11px;
+  left: 2px;          /* thin line on far left */
   top: 0;
   bottom: 0;
   width: 2px;
@@ -872,8 +872,8 @@ svg { display: block; }
 
 .tl-dot {
   position: absolute;
-  left: -34px;
-  top: 24px;
+  left: -36px;  /* item at 44px → dot left edge at 44-36=8px (line right edge=4px) ✔️ */
+  top: 22px;
   width: 24px; height: 24px;
   border-radius: 50%;
   background: var(--blue-glow);
@@ -1535,8 +1535,9 @@ svg { display: block; }
   .hero-title { font-size: clamp(2.4rem, 8vw, 3.5rem); }
   .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
 
-  .timeline { padding-left: 24px; }
-  .tl-dot { left: -20px; width: 18px; height: 18px; }
+  .timeline { padding-left: 32px; }
+  .timeline::before { left: 2px; }
+  .tl-dot { left: -24px; width: 18px; height: 18px; } /* dot at 32-24=8px → right of line ✔️ */
   .tl-dot svg { width: 9px; height: 9px; }
 
   .form-row { grid-template-columns: 1fr; }
