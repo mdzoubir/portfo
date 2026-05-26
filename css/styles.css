@@ -1472,12 +1472,340 @@ svg { display: block; }
 .modal-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 
 /* ============================================================
-   ANIMATIONS
+   ANIMATIONS — BASE
    ============================================================ */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* ============================================================
+   PREMIUM ANIMATION LAYER
+   ============================================================ */
+
+/* --- SCROLL PROGRESS BAR --- */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  z-index: 9999;
+  pointer-events: none;
+  transition: none;
+  will-change: width;
+}
+
+/* --- CUSTOM CURSOR --- */
+.custom-cursor {
+  position: fixed;
+  width: 12px; height: 12px;
+  background: var(--blue);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: difference;
+  opacity: 0;
+  will-change: transform;
+}
+.custom-cursor.visible { opacity: 1; }
+.custom-cursor.hovering {
+  width: 40px; height: 40px;
+  background: #fff;
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor { display: none !important; }
+}
+
+/* --- LOGO SHIMMER ON HOVER --- */
+.nav-logo {
+  background-image: linear-gradient(90deg, var(--text), var(--blue), var(--cyan), var(--text));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0% 50%;
+}
+.nav-logo:hover {
+  animation: shimmer 1.2s ease forwards;
+}
+.nav-logo .logo-bracket {
+  -webkit-text-fill-color: var(--blue);
+}
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* --- SECTION NUMBER DRAW ANIMATION --- */
+.section-num {
+  position: relative;
+  overflow: hidden;
+}
+.js-loaded .section-num::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--blue);
+  border-radius: inherit;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.js-loaded .reveal.visible .section-num::before {
+  clip-path: inset(0 0 0 0);
+}
+
+/* --- STAGGERED TIMELINE ITEMS --- */
+.js-loaded .tl-item.reveal {
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.js-loaded .tl-item.reveal:nth-child(even) {
+  transform: translateX(30px);
+}
+.js-loaded .tl-item.reveal.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.tl-item:nth-child(1) { transition-delay: 0s; }
+.tl-item:nth-child(2) { transition-delay: 0.1s; }
+.tl-item:nth-child(3) { transition-delay: 0.2s; }
+.tl-item:nth-child(4) { transition-delay: 0.3s; }
+.tl-item:nth-child(5) { transition-delay: 0.4s; }
+.tl-item:nth-child(6) { transition-delay: 0.5s; }
+
+/* --- STAGGERED PROJECT CARDS --- */
+.js-loaded .project-card.reveal {
+  transform: translateY(40px) scale(0.97);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.js-loaded .project-card.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+.project-card:nth-child(1) { transition-delay: 0s; }
+.project-card:nth-child(2) { transition-delay: 0.12s; }
+.project-card:nth-child(3) { transition-delay: 0.24s; }
+.project-card:nth-child(4) { transition-delay: 0.36s; }
+.project-card:nth-child(5) { transition-delay: 0.48s; }
+.project-card:nth-child(6) { transition-delay: 0.6s; }
+
+/* --- SKILL BADGE POP-IN --- */
+.js-loaded .skill-badge,
+.js-loaded .s-tag {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+}
+.js-loaded .reveal.visible .skill-badge,
+.js-loaded .reveal.visible .s-tag,
+.js-loaded .stack-card.reveal.visible .s-tag {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Stagger badges */
+.skill-badge:nth-child(1), .s-tag:nth-child(1) { transition-delay: 0.05s; }
+.skill-badge:nth-child(2), .s-tag:nth-child(2) { transition-delay: 0.1s; }
+.skill-badge:nth-child(3), .s-tag:nth-child(3) { transition-delay: 0.15s; }
+.skill-badge:nth-child(4), .s-tag:nth-child(4) { transition-delay: 0.2s; }
+.skill-badge:nth-child(5), .s-tag:nth-child(5) { transition-delay: 0.25s; }
+.skill-badge:nth-child(6), .s-tag:nth-child(6) { transition-delay: 0.3s; }
+.skill-badge:nth-child(7), .s-tag:nth-child(7) { transition-delay: 0.35s; }
+.skill-badge:nth-child(8), .s-tag:nth-child(8) { transition-delay: 0.4s; }
+
+/* --- METRIC COUNT-UP --- */
+.metric-num {
+  will-change: opacity;
+}
+.js-loaded .metric-num.counting {
+  animation: countPulse 0.6s ease;
+}
+@keyframes countPulse {
+  0%   { opacity: 0.5; transform: scale(0.9); }
+  50%  { opacity: 1;   transform: scale(1.05); }
+  100% { opacity: 1;   transform: scale(1); }
+}
+
+/* --- BUTTON RIPPLE EFFECT --- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: ripple-anim 0.6s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes ripple-anim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* --- HERO EYEBROW GLOW PULSE --- */
+.hero-eyebrow {
+  animation: eyebrow-glow 3s ease-in-out infinite;
+}
+@keyframes eyebrow-glow {
+  0%, 100% { filter: drop-shadow(0 0 0px var(--blue)); }
+  50%      { filter: drop-shadow(0 0 10px var(--blue)); }
+}
+
+/* --- PROJECT CARD HOVER ENHANCEMENTS --- */
+.project-card:hover .p-tag {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.btn-ghost svg {
+  transition: transform var(--t-fast);
+}
+.btn-ghost:hover svg {
+  transform: translateX(4px);
+}
+
+/* --- STACK CARD TILT ON HOVER --- */
+.stack-card {
+  perspective: 1000px;
+}
+.stack-card:hover {
+  transform: translateY(-5px) rotateX(-2deg) rotateY(2deg);
+}
+
+/* --- STACK CARD ICON BOUNCE ON HOVER --- */
+.stack-card:hover .stack-card-icon svg {
+  animation: icon-bounce 0.5s ease;
+}
+@keyframes icon-bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-6px); }
+  50%  { transform: translateY(2px); }
+  70%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+/* --- MODAL ENHANCED ANIMATION --- */
+.modal-box {
+  transform: translateY(20px) scale(0.85);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+}
+.modal.open .modal-box {
+  transform: none;
+  opacity: 1;
+}
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal.open .modal-backdrop {
+  opacity: 1;
+}
+
+/* Modal close rotate on hover */
+.modal-close {
+  transition: all var(--t-fast), transform var(--t-med);
+}
+.modal-close:hover {
+  transform: rotate(90deg);
+}
+
+/* Modal scroll fade mask */
+.modal-box::after {
+  content: '';
+  position: sticky;
+  bottom: 0; left: 0;
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--bg-card));
+  pointer-events: none;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+/* --- FORM INPUT ANIMATED BORDER --- */
+.form-input {
+  position: relative;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(var(--bg-3), var(--bg-3)), linear-gradient(90deg, var(--blue), var(--cyan));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 0% 2px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease, border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.form-input:focus {
+  background-size: 100% 100%, 100% 2px;
+  border-color: transparent;
+}
+
+/* --- CONTACT SUBMIT BUTTON STATES --- */
+.btn-primary.loading {
+  pointer-events: none;
+  position: relative;
+  color: transparent !important;
+}
+.btn-primary.loading::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spinner 0.6s linear infinite;
+}
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+.btn-primary.success {
+  background: #27c93f !important;
+  border-color: #27c93f !important;
+  pointer-events: none;
+}
+
+/* --- CONTACT INFO SLIDE-IN --- */
+.js-loaded .contact-info.reveal {
+  transform: translateX(-40px);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js-loaded .contact-info.reveal.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- SMOOTH SCROLL OFFSET FOR STICKY NAVBAR --- */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* ============================================================
+   PREFERS REDUCED MOTION — KILL ALL ANIMATIONS
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .custom-cursor { display: none !important; }
+  .hero-orb { animation: none !important; }
+  .hero-card { animation: none !important; }
+  .js-loaded .reveal { opacity: 1 !important; transform: none !important; }
+  .js-loaded .tl-item.reveal { opacity: 1 !important; transform: none !important; }
+  .js-loaded .project-card.reveal { opacity: 1 !important; transform: none !important; }
+  .js-loaded .skill-badge, .js-loaded .s-tag { opacity: 1 !important; transform: none !important; }
+}
+
 
 /* ============================================================
    RESPONSIVE

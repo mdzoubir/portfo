@@ -34,6 +34,11 @@
 </head>
 <body>
 
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <!-- Custom cursor -->
+    <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
     <!-- ========= NAVBAR ========= -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
@@ -254,15 +259,15 @@
             <!-- Metrics -->
             <div class="metrics-bar reveal">
                 <div class="metric-card glass-card">
-                    <span class="metric-num" data-target="1337">0</span>
+                    <span class="metric-num" data-count="1337">0</span>
                     <span class="metric-label" data-i18n="metric.label.1">Algorithmique & C/C++</span>
                 </div>
                 <div class="metric-card glass-card">
-                    <span class="metric-num" data-suffix="+">4</span>
+                    <span class="metric-num" data-count="4" data-suffix="+">0</span>
                     <span class="metric-label" data-i18n="metric.label.2">Ans d'expérience</span>
                 </div>
                 <div class="metric-card glass-card">
-                    <span class="metric-num" data-suffix="+">6</span>
+                    <span class="metric-num" data-count="6" data-suffix="+">0</span>
                     <span class="metric-label" data-i18n="metric.label.3">Frameworks maîtrisés</span>
                 </div>
             </div>

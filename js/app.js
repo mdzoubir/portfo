@@ -485,6 +485,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (res.ok) {
           form.reset();
+          submitBtn.classList.remove('loading');
+          submitBtn.classList.add('success');
+          const origText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '✓';
+          setTimeout(() => {
+            submitBtn.classList.remove('success');
+            submitBtn.innerHTML = origText;
+          }, 2000);
           if (successOverlay) successOverlay.classList.add('active');
         } else {
           const json = await res.json().catch(() => ({}));
@@ -495,6 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (errorEl) errorEl.textContent = 'Erreur réseau. Vérifiez votre connexion.';
       } finally {
         submitBtn.disabled = false;
+        submitBtn.classList.remove('loading');
         submitBtn.textContent = originalText;
       }
     });
@@ -526,6 +535,154 @@ document.addEventListener('DOMContentLoaded', () => {
     langTabBtn.addEventListener('click', () => {
       setTimeout(animateLangBars, 50);
     });
+  }
+  /* ============================================================
+     SCROLL PROGRESS BAR
+     ============================================================ */
+  const progressBar = document.getElementById('scroll-progress');
+  if (progressBar) {
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  /* ============================================================
+     CUSTOM CURSOR
+     ============================================================ */
+  const cursor = document.getElementById('custom-cursor');
+  if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let cx = 0, cy = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', e => {
+      tx = e.clientX; ty = e.clientY;
+      if (!cursor.classList.contains('visible')) cursor.classList.add('visible');
+    });
+
+    // Smooth follow via rAF
+    const followCursor = () => {
+      cx += (tx - cx) * 0.15;
+      cy += (ty - cy) * 0.15;
+      cursor.style.left = cx + 'px';
+      cursor.style.top = cy + 'px';
+      requestAnimationFrame(followCursor);
+    };
+    requestAnimationFrame(followCursor);
+
+    // Expand on interactive elements
+    const interactiveEls = 'a, button, .btn, .filter-btn, .overlay-btn, .nav-btn, .social-link, .footer-social, .btn-icon-link, .btn-ghost, input, textarea';
+    document.querySelectorAll(interactiveEls).forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+
+    document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+  }
+
+  /* ============================================================
+     COUNTER ANIMATION on metrics
+     ============================================================ */
+  const counterEls = document.querySelectorAll('[data-count]');
+  let counterAnimated = false;
+
+  function animateCounters() {
+    if (counterAnimated) return;
+    counterAnimated = true;
+
+    counterEls.forEach(el => {
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = target > 100 ? 1800 : 1200;
+      const start = performance.now();
+      el.classList.add('counting');
+
+      const step = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  // Also animate hero stats (1337, 4+, 6+) on first visibility
+  if (counterEls.length) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          counterObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const metricsBar = document.querySelector('.metrics-bar');
+    if (metricsBar) counterObserver.observe(metricsBar);
+  }
+
+  /* ============================================================
+     HERO STAT COUNT-UP (in the card)
+     ============================================================ */
+  const heroStats = [
+    { el: document.getElementById('stat-1337'), target: 1337, suffix: '' },
+    { el: document.getElementById('stat-years'), target: 4, suffix: '+' },
+    { el: document.getElementById('stat-fw'), target: 6, suffix: '+' }
+  ];
+
+  function animateHeroStats() {
+    heroStats.forEach(({ el, target, suffix }) => {
+      if (!el) return;
+      const duration = target > 100 ? 2000 : 800;
+      const start = performance.now();
+      const step = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  // Trigger hero stat counting after a short delay on load
+  setTimeout(animateHeroStats, 800);
+
+  /* ============================================================
+     BUTTON RIPPLE EFFECT
+     ============================================================ */
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const existing = this.querySelector('.ripple');
+      if (existing) existing.remove();
+
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 700);
+    });
+  });
+
+  /* ============================================================
+     FORM SUBMIT — Loading / Success States
+     (Enhances existing form handler — adds loading class)
+     ============================================================ */
+  if (form && submitBtn) {
+    form.addEventListener('submit', () => {
+      submitBtn.classList.add('loading');
+    }, { capture: true });
   }
 
 });
