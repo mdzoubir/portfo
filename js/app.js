@@ -236,6 +236,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) langBtn.textContent = lang === 'fr' ? 'EN' : 'FR';
 
+    const cvBtn = document.getElementById('hero-btn-cv');
+    if (cvBtn) {
+      if (lang === 'fr') {
+        cvBtn.href = 'assets/cv.pdf';
+        cvBtn.download = 'cv.pdf';
+      } else {
+        cvBtn.href = 'assets/resume.pdf';
+        cvBtn.download = 'resume.pdf';
+      }
+    }
+
     typewriterWords = t['typewriter'];
     resetTypewriter();
   };
@@ -452,6 +463,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
      CONTACT FORM — Formspree
+     Note on Rate Limiting: Formspree handles rate limiting automatically.
+     If migrating to a custom backend in the future, be sure to implement
+     rate limiting (e.g., via IP tracking or token buckets) on the server.
      ============================================================ */
   const form = document.getElementById('contact-form');
   const successOverlay = document.getElementById('form-success');
@@ -652,8 +666,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Trigger hero stat counting after a short delay on load
-  setTimeout(animateHeroStats, 800);
+  // Trigger hero stat counting using IntersectionObserver
+  const heroCard = document.querySelector('.hero-card');
+  if (heroCard) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(animateHeroStats, 200);
+          heroObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    heroObserver.observe(heroCard);
+  } else {
+    setTimeout(animateHeroStats, 800);
+  }
+
+  /* ============================================================
+     CONTACT PHONE REVEAL
+     ============================================================ */
+  const revealPhoneBtn = document.getElementById('reveal-phone-btn');
+  const phoneValue = document.getElementById('phone-value');
+  if (revealPhoneBtn && phoneValue) {
+    revealPhoneBtn.addEventListener('click', (e) => {
+      const rawPhone = revealPhoneBtn.dataset.phone;
+      const formattedPhone = revealPhoneBtn.dataset.phoneFormatted;
+      
+      // If it hasn't been revealed yet
+      if (revealPhoneBtn.getAttribute('href') === '#') {
+        e.preventDefault();
+        revealPhoneBtn.setAttribute('href', `tel:${rawPhone}`);
+        phoneValue.textContent = formattedPhone;
+        phoneValue.style.color = 'var(--text)';
+        phoneValue.style.fontWeight = '600';
+      }
+    });
+  }
 
   /* ============================================================
      BUTTON RIPPLE EFFECT

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Zoubir | Développeur Full-Stack</title>
+    <link rel="canonical" href="https://mzoubir.com">
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="Mohamed Zoubir | Développeur Full-Stack">
@@ -20,7 +21,7 @@
     <meta property="og:title" content="Mohamed Zoubir | Développeur Full-Stack">
     <meta property="og:description"
         content="Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Spécialisé dans la conception d'architectures backend robustes et d'interfaces fluides.">
-    <meta property="og:image" content="assets/images/portfolio-banner.jpg">
+    <meta property="og:image" content="assets/images/portfolio-banner.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -28,7 +29,7 @@
     <meta property="twitter:title" content="Mohamed Zoubir | Développeur Full-Stack">
     <meta property="twitter:description"
         content="Développeur Full-Stack et étudiant à l'École 1337. Découvrez mes réalisations.">
-    <meta property="twitter:image" content="assets/images/portfolio-banner.jpg">
+    <meta property="twitter:image" content="assets/images/portfolio-banner.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,9 +126,8 @@
                             id="typewriter-text"></span><span class="typewriter-cursor">|</span>
                     </div>
                     <p class="hero-desc" data-i18n="hero.desc">
-                        Développeur Full-Stack et étudiant à l'École 1337 (42 Network). Je me concentre sur la création
-                        d'architectures backend rigoureuses et d'interfaces logicielles fluides, performantes et
-                        centrées sur le produit.
+                        Développeur Full-Stack avec 2+ ans d'expérience en production — APIs backend, déploiements cloud
+                        et interfaces frontend. Approfondissement en ingénierie système à l'École 1337 (42 Network).
                     </p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-primary" id="hero-btn-connect" data-i18n="hero.btn.contact">Me
@@ -177,7 +177,8 @@
                                 data-i18n="widget.val.status">"Étudiant 1337 / Dev"</span></div>
                         <div class="code-line"><span class="code-key"
                                 data-i18n="widget.label.origin">localisation</span><span class="code-colon">:</span>
-                            <span class="code-string">"Beni Mellal, Maroc"</span></div>
+                            <span class="code-string">"Beni Mellal, Maroc"</span>
+                        </div>
                         <div class="code-line"><span class="code-key" data-i18n="widget.label.domains">stack</span><span
                                 class="code-colon">:</span> <span class="code-array">[Java, Python, PHP, JS]</span>
                         </div>
@@ -227,7 +228,7 @@
                     <!-- Avatar -->
                     <div class="about-avatar-col reveal">
                         <div class="avatar-wrapper">
-                            <img src="assets/images/profile.jpg"
+                            <img src="assets/images/profile.webp"
                                 alt="Mohamed Zoubir — Full-Stack Developer based in Beni Mellal, Morocco" id="about-img"
                                 class="avatar-img"
                                 onerror="this.style.display='none'; document.getElementById('avatar-initials').style.display='flex';">
@@ -550,10 +551,62 @@
                 <!-- Grid -->
                 <div class="projects-grid" id="projects-grid">
 
+                    <!-- Knowplus -->
+                    <article class="project-card glass-card reveal" data-category="fullstack">
+                        <div class="project-img-wrap">
+                            <img src="assets/images/knowplus_learning.webp" alt="Plateforme Knowplus" id="project-img-6"
+                                loading="lazy">
+                            <div class="project-img-overlay">
+                                <button class="overlay-btn" data-modal="knowplus" aria-label="Voir le projet">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="p-tag">Django</span>
+                                <span class="p-tag">Python</span>
+                                <span class="p-tag">Full-Stack</span>
+                            </div>
+                            <h3 class="project-title" data-i18n="project.knowplus.title">Knowplus <span
+                                    class="private-badge"
+                                    style="border: none; background: rgba(39,201,63,0.15); color: #27c93f; padding: 2px 8px; margin-left: 8px;">🔴
+                                    Live · Production</span></h3>
+                            <p class="project-desc" data-i18n="project.knowplus.desc">Plateforme e-learning belge
+                                permettant la gestion de cours, modules et utilisateurs avec tableau de bord interactif.
+                            </p>
+                            <div class="project-actions">
+                                <button class="btn-ghost" data-modal="knowplus" data-i18n="project.link.details">
+                                    Détails <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                        <polyline points="12 5 19 12 12 19" />
+                                    </svg>
+                                </button>
+                                <a href="https://www.knowplus.be/" target="_blank" rel="noopener" class="btn-icon-link"
+                                    aria-label="Live demo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- RentEase -->
                     <article class="project-card glass-card reveal" data-category="fullstack">
                         <div class="project-img-wrap">
-                            <img src="assets/images/rentease_ui.png" alt="Plateforme RentEase" id="project-img-1"
+                            <img src="assets/images/rentease_ui.webp" alt="Plateforme RentEase" id="project-img-1"
                                 loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="rentease" aria-label="Voir le projet">
@@ -585,14 +638,15 @@
                                         <polyline points="12 5 19 12 12 19" />
                                     </svg>
                                 </button>
-                                <span class="private-badge" title="Code source non disponible publiquement">
+                                <span class="private-badge" data-i18n="project.private"
+                                    title="Code source non disponible publiquement">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                                         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                                     </svg>
-                                    Privé
+                                    Code source confidentiel
                                 </span>
                             </div>
                         </div>
@@ -601,7 +655,7 @@
                     <!-- Automize -->
                     <article class="project-card glass-card reveal" data-category="backend">
                         <div class="project-img-wrap">
-                            <img src="assets/images/automize_api.png" alt="API Services Automize" id="project-img-2"
+                            <img src="assets/images/automize_api.webp" alt="API Services Automize" id="project-img-2"
                                 loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="automize" aria-label="Voir le projet">
@@ -633,14 +687,15 @@
                                         <polyline points="12 5 19 12 12 19" />
                                     </svg>
                                 </button>
-                                <span class="private-badge">
+                                <span class="private-badge" data-i18n="project.private"
+                                    title="Code source non disponible publiquement">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                                         <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                                     </svg>
-                                    Privé
+                                    Code source confidentiel
                                 </span>
                             </div>
                         </div>
@@ -649,7 +704,7 @@
                     <!-- Inas Admin Hub -->
                     <article class="project-card glass-card reveal" data-category="backend">
                         <div class="project-img-wrap">
-                            <img src="assets/images/inas_admin.png" alt="Inas Admin Portal" id="project-img-3"
+                            <img src="assets/images/inas_admin.webp" alt="Inas Admin Portal" id="project-img-3"
                                 loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="larastore" aria-label="Voir le projet">
@@ -687,7 +742,7 @@
                     <!-- Cultural Moroccan Events -->
                     <article class="project-card glass-card reveal" data-category="frontend">
                         <div class="project-img-wrap">
-                            <img src="assets/images/cultural_events.png" alt="Cultural Moroccan Events"
+                            <img src="assets/images/cultural_events.webp" alt="Cultural Moroccan Events"
                                 id="project-img-4" loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="culturalevents" aria-label="Voir le projet">
@@ -746,7 +801,7 @@
                     <!-- Quordle -->
                     <article class="project-card glass-card reveal" data-category="frontend">
                         <div class="project-img-wrap">
-                            <img src="assets/images/quordle_game.png" alt="Quordle Game" id="project-img-5"
+                            <img src="assets/images/quordle_game.webp" alt="Quordle Game" id="project-img-5"
                                 loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="quordle" aria-label="Voir le projet">
@@ -803,7 +858,7 @@
                     <!-- Knowplus -->
                     <article class="project-card glass-card reveal" data-category="fullstack">
                         <div class="project-img-wrap">
-                            <img src="assets/images/knowplus_learning.png" alt="Knowplus" id="project-img-6"
+                            <img src="assets/images/knowplus_learning.webp" alt="Knowplus" id="project-img-6"
                                 loading="lazy">
                             <div class="project-img-overlay">
                                 <button class="overlay-btn" data-modal="knowplus" aria-label="Voir le projet">
@@ -976,7 +1031,8 @@
                             techniques.</p>
 
                         <div class="contact-links">
-                            <a href="tel:+212617198646" class="contact-link-card glass-card">
+                            <a href="#" class="contact-link-card glass-card" id="reveal-phone-btn"
+                                data-phone="+212617198646" data-phone-formatted="+212 617 198 646">
                                 <div class="clc-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -985,9 +1041,10 @@
                                             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                     </svg>
                                 </div>
-                                <div>
+                                <div style="text-align: left;">
                                     <div class="clc-label" data-i18n="contact.phone.label">Téléphone</div>
-                                    <div class="clc-value">+212 617 198 646</div>
+                                    <div class="clc-value" id="phone-value" data-i18n="contact.phone.reveal">Cliquer
+                                        pour révéler</div>
                                 </div>
                             </a>
                             <a href="mailto:mohamed.zoubir.dev@gmail.com" class="contact-link-card glass-card">
@@ -1152,7 +1209,7 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/rentease_ui.png" alt="RentEase" class="modal-img">
+            <img src="assets/images/rentease_ui.webp" alt="RentEase" class="modal-img" loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">Spring Boot</span><span class="p-tag">Angular</span><span
                         class="p-tag">PostgreSQL</span></div>
@@ -1175,13 +1232,13 @@
                 <h4 class="modal-sub">Stack Technique</h4>
                 <p>Java 17, Spring Boot, Spring Security (JWT), Hibernate, Angular 14, PostgreSQL.</p>
                 <div class="modal-actions">
-                    <span class="private-badge large">
+                    <span class="private-badge large" data-i18n="project.private">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
-                        Code source privé
+                        Code source confidentiel
                     </span>
                 </div>
             </div>
@@ -1199,7 +1256,7 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/automize_api.png" alt="Automize REST APIs" class="modal-img">
+            <img src="assets/images/automize_api.webp" alt="Automize REST APIs" class="modal-img" loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">Django DRF</span><span class="p-tag">Python</span><span
                         class="p-tag">Heroku</span></div>
@@ -1221,13 +1278,13 @@
                 <h4 class="modal-sub">Stack Technique</h4>
                 <p>Python, Django, Django Rest Framework, PostgreSQL, Heroku.</p>
                 <div class="modal-actions">
-                    <span class="private-badge large">
+                    <span class="private-badge large" data-i18n="project.private">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                         </svg>
-                        Code source privé
+                        Code source confidentiel
                     </span>
                 </div>
             </div>
@@ -1245,7 +1302,7 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/inas_admin.png" alt="Inas Admin Hub" class="modal-img">
+            <img src="assets/images/inas_admin.webp" alt="Inas Admin Hub" class="modal-img" loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">Laravel</span><span class="p-tag">MySQL</span><span
                         class="p-tag">Blade</span></div>
@@ -1281,7 +1338,8 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/cultural_events.png" alt="Cultural Moroccan Events" class="modal-img">
+            <img src="assets/images/cultural_events.webp" alt="Cultural Moroccan Events" class="modal-img"
+                loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">JavaScript</span><span class="p-tag">HTML5 /
                         CSS3</span><span class="p-tag">API REST</span></div>
@@ -1325,7 +1383,7 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/quordle_game.png" alt="Quordle Game" class="modal-img">
+            <img src="assets/images/quordle_game.webp" alt="Quordle Game" class="modal-img" loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">JavaScript</span><span class="p-tag">HTML5 /
                         CSS3</span><span class="p-tag">Game Logic</span></div>
@@ -1369,7 +1427,7 @@
                     <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
             </button>
-            <img src="assets/images/knowplus_learning.png" alt="Knowplus" class="modal-img">
+            <img src="assets/images/knowplus_learning.webp" alt="Knowplus" class="modal-img" loading="lazy">
             <div class="modal-content">
                 <div class="modal-tags"><span class="p-tag">Django</span><span class="p-tag">Python</span><span
                         class="p-tag">Full-Stack</span></div>
